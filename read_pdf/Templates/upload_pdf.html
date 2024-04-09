@@ -1,0 +1,69 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: yellowgreen;
+        }
+        .heading {
+            margin-bottom: 0px;
+        }
+        .main {
+            border-color: red;
+            height: 300px;
+            width: 400px;
+            background-color: red;
+            padding-top: 140px;
+            margin-top: 50px;
+        }
+        .container {
+            height: 500px;
+            width: 400px;
+            text-align: center;
+            justify-content: center;
+            padding: 100px;
+        }
+
+        .upload-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .upload-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+        <h1>MARATHI PDF READER</h1>
+        </div>
+        <div class="main">
+        <h1> Please Choose File</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="pdf_file">
+            <br><br>
+            <button type="submit" class="upload-btn">Show Summary</button>
+        </form>
+        </div>
+    </div>
+</body>
+</html>

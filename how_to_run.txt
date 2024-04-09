@@ -1,0 +1,5 @@
+1) clone the project
+2) install libraries from requirments.txt file
+3) run python manage.py runserver
+4) select pdf file
+5) click on show summary button
